@@ -32,16 +32,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  services.xserver.enable = true;
-
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -54,19 +44,26 @@
   users.users.data = {
     isNormalUser = true;
     description = "data";
+    shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    
-    ];
   };
 
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    gcc
     git
+    kitty
+    lazygit
     neovim
+    quickshell
     stow
+    unzip
+    wget
   ];
+
+  programs.fish.enable = true;
+  programs.hyprland.enable = true;
 
   system.stateVersion = "25.05";
 }
