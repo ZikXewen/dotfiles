@@ -51,9 +51,9 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    foot
     gcc
     git
-    kitty
     lazygit
     neovim
     quickshell
@@ -64,6 +64,10 @@
 
   programs.fish.enable = true;
   programs.hyprland.enable = true;
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
 
   system.stateVersion = "25.05";
 }
