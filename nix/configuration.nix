@@ -55,8 +55,10 @@
     gcc
     git
     lazygit
+    neofetch
     neovim
     quickshell
+    starship
     stow
     unzip
     wget
@@ -64,6 +66,7 @@
 
   programs.fish.enable = true;
   programs.hyprland.enable = true;
+  programs.starship.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
