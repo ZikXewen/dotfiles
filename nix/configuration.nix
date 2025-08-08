@@ -51,6 +51,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    eza
     foot
     gcc
     git
@@ -65,6 +66,7 @@
     wget
   ];
 
+  programs.firefox.enable = true;
   programs.fish.enable = true;
   programs.hyprland.enable = true;
   programs.starship.enable = true;
