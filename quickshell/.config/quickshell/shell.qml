@@ -48,7 +48,7 @@ PanelWindow {
         font.family: "Courier"
         font.pixelSize: 40
         font.bold: true
-        color: "white"
+        color: "#33ccff"
         text: { // TODO: Animation
           const id = Hyprland.focusedWorkspace?.id ?? 1
           switch (id) {
@@ -71,6 +71,8 @@ PanelWindow {
         Layout.fillWidth: true
         ShapePath {
           strokeWidth: 6
+          strokeColor: "#33ccff"
+          fillColor: "#33ccff"
           startX: 0
           startY: separator.height / 2
           PathAngleArc {
@@ -100,7 +102,7 @@ PanelWindow {
         font.family: "Courier"
         font.pixelSize: 40
         font.bold: true
-        color: "white"
+        color: "#33ccff"
         Process {
           id: dateProc
           command: ["date", "+%H:%M:%S"]
