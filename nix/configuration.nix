@@ -58,6 +58,7 @@
     neofetch
     neovim
     quickshell
+    ripgrep
     starship
     stow
     unzip
