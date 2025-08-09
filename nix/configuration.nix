@@ -8,18 +8,14 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   boot.initrd.luks.devices."luks-b1fabe38-7ef6-4f9b-b6f4-77a5d0fbf2ac".device = "/dev/disk/by-uuid/b1fabe38-7ef6-4f9b-b6f4-77a5d0fbf2ac";
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  networking.firewall.allowedTCPPorts = [ 80 443 22 ];
 
   time.timeZone = "America/Chicago";
-
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -45,9 +41,10 @@
     isNormalUser = true;
     description = "data";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "docker" "networkmanager" "wheel" ];
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
@@ -70,6 +67,16 @@
   programs.fish.enable = true;
   programs.hyprland.enable = true;
   programs.starship.enable = true;
+
+  services.openssh.enable = true;
+
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
