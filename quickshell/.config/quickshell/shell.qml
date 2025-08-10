@@ -41,8 +41,7 @@ PanelWindow {
       right: 20
     }
     RowLayout {
-      width: parent.width
-      height: parent.height
+      anchors.fill: parent
       spacing: 16
       Text {
         font.family: "Courier"
