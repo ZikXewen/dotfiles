@@ -49,11 +49,11 @@
 
   environment.systemPackages = with pkgs; [
     eza
+    fastfetch
     foot
     gcc
     git
     lazygit
-    neofetch
     neovim
     quickshell
     ripgrep
