@@ -5,7 +5,10 @@
   };
   outputs = { self, nixpkgs }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      modules = [ ./configuration.nix ];
+      modules = [
+        ./configuration.nix
+        ./hardware-configuration.nix
+      ];
     };
   };
 }

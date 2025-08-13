@@ -1,11 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      /etc/nixos/hardware-configuration.nix
-    ];
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices."luks-b1fabe38-7ef6-4f9b-b6f4-77a5d0fbf2ac".device = "/dev/disk/by-uuid/b1fabe38-7ef6-4f9b-b6f4-77a5d0fbf2ac";
