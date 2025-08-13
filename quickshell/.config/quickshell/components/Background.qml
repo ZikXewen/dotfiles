@@ -16,7 +16,9 @@ PanelWindow {
     id: bgImg
     anchors.fill: parent
     fillMode: Image.PreserveAspectCrop
-    source: "root:/assets/wallhaven-exl88k.png"
+    source: "root:/assets/wallhaven-2e2xyx.jpg"
+    // source: "root:/assets/wallhaven-96mv8d.jpg"
+    // source: "root:/assets/wallhaven-exl88k.png"
   }
 }
 
