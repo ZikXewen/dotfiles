@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   boot.loader.systemd-boot.enable = true;
@@ -61,6 +61,7 @@
   programs.firefox.enable = true;
   programs.fish.enable = true;
   programs.hyprland.enable = true;
+  programs.nvf.enable = true;
   programs.starship.enable = true;
 
   services.openssh.enable = true;
