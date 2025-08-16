@@ -9,14 +9,14 @@ in {
     };
     theme = {
       enable = true;
-      name = "oxocarbon";
-      style = "dark";
+      name = "tokyonight";
+      style = "night";
       transparent = true;
     };
+    mini.icons.enable = true;
     statusline.lualine.enable = true;
     telescope.enable = true;
     lsp.enable = true;
-    lsp.lspkind.enable = true;
     treesitter.enable = true;
     utility.oil-nvim = {
       enable = true;
@@ -46,7 +46,7 @@ in {
         progress.win_options.winblend = 10;
       };
     };
-    autocomplete.nvim-cmp = {
+    autocomplete.blink-cmp = {
       enable = true;
       mappings = {
         next = "<C-n>";
@@ -55,6 +55,18 @@ in {
     };
     keymaps = [
       { mode = "n"; key = "<BS>"; action = "<Cmd>Oil<CR>"; }
+      { mode = "n"; key = "<Leader>li"; action = "<Cmd>che vim.lsp<CR>"; }
     ];
+    languages = {
+      enableFormat = true;
+      clang = {
+        enable = true;
+        lsp.enable = true;
+      };
+      nix = {
+        enable = true;
+        lsp.enable = true;
+      };
+    };
   };
 }
