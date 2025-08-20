@@ -2,6 +2,7 @@ if status is-interactive
   set fish_greeting
   starship init fish | source
   alias lg lazygit
+  alias dsp "docker system prune -a --volumes -f"
   alias dcd "docker compose down"
   alias dcu "docker compose up --detach"
   alias dcub "dcu --build"
