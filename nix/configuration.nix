@@ -37,6 +37,7 @@
     description = "data";
     shell = pkgs.fish;
     extraGroups = [ "docker" "networkmanager" "wheel" ];
+    linger = true;
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
