@@ -52,6 +52,7 @@
     git
     lazygit
     neovim
+    oxker
     quickshell
     ripgrep
     starship
@@ -73,6 +74,11 @@
     rootless = {
       enable = true;
       setSocketVariable = true;
+    };
+    autoPrune = {
+      enable = true;
+      flags = [ "-a" "--volumes" ];
+      dates = "daily";
     };
   };
 

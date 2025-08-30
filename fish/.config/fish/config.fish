@@ -6,10 +6,12 @@ if status is-interactive
   alias dcd "docker compose down"
   alias dcu "docker compose up --detach"
   alias dcub "dcu --build"
+  alias ff "fastfetch"
   alias ls "eza"
   alias ll "eza -l"
   alias la "eza -alh"
   alias tree "eza -T"
+  alias ox "oxker --host $DOCKER_HOST"
 end
 
 if status is-login 
