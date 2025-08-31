@@ -50,6 +50,7 @@
     foot
     gcc
     git
+    infisical
     lazygit
     neovim
     oxker
