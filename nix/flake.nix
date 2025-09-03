@@ -14,6 +14,7 @@
         ./nvf.nix
         ./configuration.nix
         ./hardware-configuration.nix
+        ./starship.nix
       ];
     };
   };
