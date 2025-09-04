@@ -10,10 +10,11 @@
   outputs = { nixpkgs, nvf, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
-        nvf.nixosModules.default
-        ./nvf.nix
         ./configuration.nix
         ./hardware-configuration.nix
+        nvf.nixosModules.default
+        ./nvf.nix
+        ./ssh.nix
         ./starship.nix
       ];
     };

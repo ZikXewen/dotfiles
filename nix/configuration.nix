@@ -68,8 +68,6 @@
   programs.nvf.enable = true;
   programs.starship.enable = true;
 
-  services.openssh.enable = true;
-
   virtualisation.docker = {
     enable = true;
     rootless = {
