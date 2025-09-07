@@ -63,6 +63,10 @@ in {
         enable = true;
         lsp.enable = true;
       };
+      java = {
+        enable = true;
+        lsp.enable = true;
+      };
       kotlin = {
         enable = true;
         lsp.enable = true;
