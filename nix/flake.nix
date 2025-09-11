@@ -16,6 +16,7 @@
         ./nvf.nix
         ./ssh.nix
         ./starship.nix
+        ./zerotier.nix
       ];
     };
   };
