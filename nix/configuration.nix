@@ -7,7 +7,6 @@
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
-  networking.firewall.allowedTCPPorts = [ 80 443 22 ];
 
   time.timeZone = "America/Chicago";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -47,15 +46,12 @@
     btop
     eza
     fastfetch
-    foot
     gcc
     infisical
     lazygit
-    neovim
     oxker
     quickshell
     ripgrep
-    starship
     stow
     unzip
     wget
@@ -65,7 +61,8 @@
   programs.fish.enable = true;
   programs.hyprland.enable = true;
   programs.nvf.enable = true;
-  programs.starship.enable = true;
+
+  documentation.man.generateCaches = false; # programs.fish.enable enables this
 
   virtualisation.docker = {
     enable = true;
@@ -79,10 +76,6 @@
       dates = "daily";
     };
   };
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-  ];
 
   system.stateVersion = "25.05";
 }

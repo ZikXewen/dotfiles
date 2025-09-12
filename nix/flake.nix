@@ -12,6 +12,7 @@
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
+        ./foot.nix
         ./git.nix
         nvf.nixosModules.default
         ./nvf.nix

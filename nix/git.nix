@@ -7,12 +7,8 @@
         name = "ZikXewen";
         email = "datasup12@gmail.com";
       };
-      init = {
-        defaultBranch = "master";
-      };
-      "url \"git@github.com:\"" = {
-        insteadOf = "https://github.com/";
-      };
+      init.defaultBranch = "master";
+      "url \"git@github.com:\"".insteadOf = "https://github.com/";
     };
   };
 }
