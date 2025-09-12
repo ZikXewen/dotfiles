@@ -1,6 +1,7 @@
 { lib, ... }: let
   inherit (lib.generators) mkLuaInline;
 in {
+  programs.nvf.enable = true;
   programs.nvf.settings.vim = {
     options = {
       tabstop = 2;

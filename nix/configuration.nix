@@ -58,11 +58,7 @@
   ];
 
   programs.firefox.enable = true;
-  programs.fish.enable = true;
   programs.hyprland.enable = true;
-  programs.nvf.enable = true;
-
-  documentation.man.generateCaches = false; # programs.fish.enable enables this
 
   virtualisation.docker = {
     enable = true;
