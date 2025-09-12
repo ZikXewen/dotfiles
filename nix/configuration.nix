@@ -49,7 +49,6 @@
     fastfetch
     foot
     gcc
-    git
     infisical
     lazygit
     neovim
