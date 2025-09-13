@@ -12,6 +12,7 @@
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
+        ./docker.nix
         ./fish.nix
         ./foot.nix
         ./git.nix

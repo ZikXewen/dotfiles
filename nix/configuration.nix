@@ -34,8 +34,7 @@
   users.users.data = {
     isNormalUser = true;
     description = "data";
-    shell = pkgs.fish;
-    extraGroups = [ "docker" "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     linger = true;
   };
 
@@ -59,19 +58,6 @@
 
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
-
-  virtualisation.docker = {
-    enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
-    autoPrune = {
-      enable = true;
-      flags = [ "-a" "--volumes" ];
-      dates = "daily";
-    };
-  };
 
   system.stateVersion = "25.05";
 }
