@@ -7,7 +7,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, nvf, ... }: {
+  outputs = {
+    nixpkgs,
+    nvf,
+    ...
+  }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
         ./configuration.nix

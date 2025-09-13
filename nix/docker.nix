@@ -1,6 +1,5 @@
-{ ... }:
-{
-  users.users.data.extraGroups = [ "docker" ];
+{...}: {
+  users.users.data.extraGroups = ["docker"];
   virtualisation.docker = {
     enable = true;
     rootless = {
@@ -9,7 +8,7 @@
     };
     autoPrune = {
       enable = true;
-      flags = [ "-a" "--volumes" ];
+      flags = ["-a" "--volumes"];
       dates = "daily";
     };
   };

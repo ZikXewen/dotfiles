@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices."luks-b1fabe38-7ef6-4f9b-b6f4-77a5d0fbf2ac".device = "/dev/disk/by-uuid/b1fabe38-7ef6-4f9b-b6f4-77a5d0fbf2ac";
@@ -34,11 +32,11 @@
   users.users.data = {
     isNormalUser = true;
     description = "data";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     linger = true;
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [

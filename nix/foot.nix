@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.foot = {
     enable = true;
     settings = {
@@ -11,5 +10,5 @@
       colors.alpha = 0.8;
     };
   };
-  fonts.packages = [ pkgs.nerd-fonts.fira-code ];
+  fonts.packages = [pkgs.nerd-fonts.fira-code];
 }

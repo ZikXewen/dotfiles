@@ -1,6 +1,5 @@
-{ ... }:
-{
-  networking.firewall.allowedTCPPorts = [ 22 ];
+{...}: {
+  networking.firewall.allowedTCPPorts = [22];
   services = {
     openssh = {
       enable = true;
@@ -11,7 +10,7 @@
     };
     fail2ban = {
       enable = true;
-      ignoreIP = [ "192.168.0.0/16" ];
+      ignoreIP = ["192.168.0.0/16"];
     };
   };
   users.users.data.openssh.authorizedKeys.keys = [
