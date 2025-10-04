@@ -99,6 +99,10 @@ in {
         enable = true;
         lsp.enable = true;
       };
+      go = {
+        enable = true;
+        lsp.enable = true;
+      };
       java = {
         enable = true;
         lsp.enable = true;
