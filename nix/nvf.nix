@@ -1,4 +1,4 @@
-{lib, ...}: let
+{pkgs, lib, ...}: let
   inherit (lib.generators) mkLuaInline;
 in {
   programs.nvf.enable = true;
@@ -18,7 +18,12 @@ in {
     statusline.lualine.enable = true;
     telescope.enable = true;
     lsp.enable = true;
-    treesitter.enable = true;
+    treesitter = {
+      enable = true;
+      grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+        fish
+      ];
+    };
     utility.oil-nvim = {
       enable = true;
       setupOpts = {
@@ -89,6 +94,7 @@ in {
     ];
     languages = {
       enableFormat = true;
+      enableTreesitter = true;
       clang = {
         enable = true;
         lsp.enable = true;
