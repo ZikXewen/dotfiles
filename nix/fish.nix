@@ -3,7 +3,7 @@
     enable = true;
     interactiveShellInit = "set fish_greeting";
     loginShellInit = /*fish*/ ''
-      if test -z "$DISPLAY" -a "$XDG_VTNR" = 1; hyprland; end
+      if uwsm check may-start; exec uwsm start hyprland-uwsm.desktop; end
     '';
     shellAliases = {
       lg = "lazygit";

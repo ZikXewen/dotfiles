@@ -35,6 +35,7 @@
     extraGroups = ["networkmanager" "wheel"];
     linger = true;
   };
+  services.getty.autologinUser = "data";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
@@ -55,7 +56,7 @@
   ];
 
   programs.firefox.enable = true;
-  programs.hyprland.enable = true;
+  networking.firewall.allowedTCPPorts = [5678];
 
   system.stateVersion = "25.05";
 }

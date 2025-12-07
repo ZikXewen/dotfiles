@@ -24,6 +24,7 @@
         ./nvf.nix
         ./ssh.nix
         ./starship.nix
+        ./hyprland.nix
         ./zerotier.nix
       ];
     };
